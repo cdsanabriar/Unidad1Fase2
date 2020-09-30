@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+ 
+<html>
+    <head>
+        <title>Unidad 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container" >
+       		<center><h1>¿Qué es CSS?</h1></center>
+       				<br>
+					CSS significa Cascading Style Sheets (Hoja de Estilos en Cascada).
+					El lenguaje CSS describe cómo se mostrarán los elementos HTML en la pantalla.
+					El lenguaje CSS ahorra mucho trabajo, ya que permite controlar el diseño de varias páginas web a la vez.
+					Todas las hojas de estilo externas se almacenan en archivos CSS.
+					¿Por qué usar CSS?
+					El lenguaje CSS se utiliza para definir los estilos de tus páginas web, incluyendo el diseño, la disposición y las variaciones en la imagen para los diferentes dispositivos y tamaños de pantalla .
+					El lenguaje CSS facilita mucho las cosas
+					La intención del lenguaje HTML no es contener etiquetas para dar formato a una página web, sino describir el contenido, como por ejemplo aquí:
+					<h4>Tres formas de insertar CSS
+					Hay tres maneras de insertar una hoja de estilo:</h4>
+					Hoja de estilos externa
+					Hoja de estilos interna
+					Estilo en línea
+					Hoja de estilos externa
+					Con una hoja de estilos externa, puedes cambiar el aspecto de un sitio web completo cambiando un sólo archivo.
+					<br>
+					Para ello cada página debe incluir una referencia al archivo de hoja de estilos externa dentro del elemento  que se encuentra dentro de la sección 
+					Una hoja de estilo externa se puede escribir desde cualquier editor de texto, debe ser guardado con la extensión .css y no puede contener ninguna etiqueta HTML .
+					<br>
+					Hoja de estilos interna
+					Una hoja de estilo interna se puede usar en una sólo página con un estilo único. Los estilos internos se definen dentro del elemento  dentro de la propia 
+					página HTML:
+					<br>
+					<br>
+					<strong>body</strong> {
+					    background-color: #FFFFFF;
+					}
+					<br>
+					<br>
+					<strong>h1</strong> {
+					    color: #000000;
+					    text-align: center;
+					} 
+					<br>
+					<hr>
+					<h3>Estilos en línea</h3>
+					Un estilo en línea se puede utilizar aplicándolo al estilo de un solo elemento. Para ello tienes que añadir el atributo de estilo al elemento en cuestión, pudiendo contener cualquier propiedad CSS, como por ejemplo la siguiente:
+					<br>
+					Orden en cascada
+					Supongo que si estás utilizando los tres tipos de CSS te preguntarás cuál prevalece, ¿no? Pues como bien indica su nombre siguen un orden en cascada con esta prioridad:
+					Estilo en línea (dentro de un elemento HTML )
+					Hojas de estilo externas e internas (en la sección de cabecera )
+					Las que viene por defecto en el navegador
+					Por lo tanto, un estilo en línea (dentro de un elemento HTML específico) tiene la prioridad más alta, lo que significa que va a anular los estilos definidos dentro de la etiqueta, aquellos recogidos en una hoja de estilos externa (archivo.css) o incluso los que trae por defecto el navegador .
+					<hr>
+					<h3>Sintaxis CSS</h3>
+					<br>
+					Un conjunto de reglas CSS consta de un selector y de un bloque de declaración:
+					css-sintaxis
+					<br>
+					El selector hace referencia al elemento HTML al que le queremos aplicar el estilo, mientras que el bloque de declaración contiene una o más declaraciones separadas por punto y coma.
+					<br>
+					Cada declaración incluye un nombre de propiedad CSS y un valor, separados por dos puntos.
+					<br>
+					Una declaración CSS siempre termina con un punto y coma, y los bloques de declaraciones están rodeados por llaves .
+					<br>
+					En el siguiente ejemplo todos los elementos de párrafo tendrán el texto azul y centrado:
+					<br>
+					<br>
+					p {<br>
+					color: blue;
+					text-align: center;
+					}
+					<hr>
+					<h2>Los selectores CSS</h2>
+					<br>
+					Los selectores CSS se utilizan para «encontrar» (o seleccionar) elementos HTML en función del nombre del elemento, del id , de la clase, del atributo, etc.
+
+					<h3>El selector de elementos</h3>
+					El selector de elementos elige elementos en función del nombre de los mismos. Por ejemplo, podríamos seleccionar todos los elementos 
+					en una página, alinearlos a la izquierda y ponerlos en color rojo de la siguiente manera:
+					<br>
+					h2 {
+					text-align: left;
+					color: red;
+					}
+					<hr>
+					<br>
+					<h3>El selector de ID</h3>
+					El selector de ID utiliza el atributo id de un elemento HTML para seleccionar un elemento específico, esto quiere decir que será único dentro de una página.
+
+					Para ello debes utilizar el símbolo de la almohadilla (#) delante del atributo id. Si por ejemplo tenemos un id=parrafo1 que queremos centrar y poner en color azul, la regla de estilo sería la siguiente:
+					<br>
+					<br>
+					<strong>#parrafo1</strong> {<br>
+					text-align: center;
+					color: blue;
+					}
+					<h3>El selector de clase</h3>
+					El selector de clase elige los elementos con un atributo de clase específico. Para ello tienes que escribir un punto (.) delante del nombre de la clase .
+					<br>
+					Por ejemplo, podemos decidir que aquellos atributos con clase «newsletter» estén centrados y sean rojos:
+					<br>
+					<br>
+					<strong>.newsletter</strong> {<br>
+					text-align: center;
+					color: red;
+					}
+					<br>
+					<br>
+					Otro caso posible sería que quisieras añadir la clase «newsletter» sólo a los elementos de párrafo, entonces quedaría de la siguiente forma:
+					<br>
+					<br>
+					<strong>p.newsletter</strong> {<br>
+					    	text-align: center;
+							color: red;
+					}
+					<br>
+					<br>
+					¿Y si quieres que tus elementos HTML hagan referencia a más de una clase? Pues también es posible
+					<br>
+					Este parrafo tiene en cuenta la clase newsletter y centrado
+					La agrupación de selectores
+					Si tienes varios elementos a los que quieres aplicarles los mismos estilos también se puede hacer. 
+					<br>
+					Para ello tienes que separar cada selector con una coma como en el siguiente ejemplo:
+					<br>
+					<br>
+					<strong>h1, h2, p </strong>{<br>
+					text-align: center;
+					color: red;
+					}
+					<hr>
+					<br>
+					<h3>Comentarios CSS</h3>
+					Los comentarios se utilizan para explicar el código, de manera que si en un futuro quieres editarlo sea más sencillo entenderlo. Para que éstos sean ignorados por los navegadores tiene que ir entre estos símbolos: al inicio  y al final  .
+
+					h2 {
+					color: blue;
+					 Esto es un comentario 
+					text-align: center;
+					}
+					<center><h1>Mockup</h1></center>
+					<img src="img/mokup.PNG" style="display: block;
+					margin-left: auto;
+					margin-right: auto;
+					width: 40%" alt="error">
+        </div>
+    </body>
+</html>
